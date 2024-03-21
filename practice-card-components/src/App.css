@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 2rem;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+}
+.card{
+    overflow: hidden;
+    box-shadow: 0 2px 20px #4f546c;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+
+    &__img{
+        height: 12rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__title{
+        padding: 1rem;
+    }
+    &__description{
+        padding: 0 1rem;
+    }
+    &__btn{
+        padding: 1rem;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 2px solid #4f546c;
+        background-color: transparent;
+        color: palegreen;
+        border-radius: 0.2rem;
+    }
+    &:hover{
+        transform: scale(1.02);
+
+    }
+    &:hover &__btn{
+        background:black ;
+    }
+}
